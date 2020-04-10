@@ -6,25 +6,70 @@
 //  Copyright © 2020 Stephanie Ballard. All rights reserved.
 //
 
+//import Foundation
+//
+//struct Pokemon: Codable {
+//    let name: String
+//    let id: Int
+//    let sprite: Sprite
+//    let types: [Types]
+//    let abilities: [Ability]
+//
+//}
+//
+//struct Sprite: Codable {
+//
+//}
+//
+//struct Types: Codable {
+//
+//}
+//
+//struct Ability: Codable {
+//
+//}
+
+
+
 import Foundation
 
-struct Pokemon: Codable {
-    let name: String
-    let id: Int
-    let sprite: Sprite
-    let types: [Types]
+// MARK: - Pokedex
+struct Pokedex {
     let abilities: [Ability]
-    
+    let id: Int
+    let name: String
+    let species: Species
+    let sprites: Sprites
+    let types: [TypeElement]
 }
 
-struct Sprite: Codable {
-    
+// MARK: - Ability
+struct Ability {
+    let ability: Species
+    let isHidden: Bool
+    let slot: Int
 }
 
-struct Types: Codable {
-    
+// MARK: - Species
+struct Species {
+    let name: String
+    let url: String
 }
 
-struct Ability: Codable {
-    
+// MARK: - Sprites
+struct Sprites {
+    let backDefault: String
+    let backFemale: NSNull
+    let backShiny: String
+    let backShinyFemale: NSNull
+    let frontDefault: String
+    let frontFemale: NSNull
+    let frontShiny: String
+    let frontShinyFemale: NSNull
+}
+
+// MARK: - TypeElement
+struct TypeElement {
+    let slot: Int
+    let type: Species
 }
