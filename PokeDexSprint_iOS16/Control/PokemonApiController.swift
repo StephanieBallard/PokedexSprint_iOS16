@@ -14,12 +14,20 @@ class PokemonApiController {
         case get = "GET"
     }
     
-    var pokemon: [Pokemon] = []
+    enum NetworkError: Error {
+        case noData
+        case badData
+        case failedFetch
+        case badURL
+    }
+    
+    var pokedex: [Pokedex] = []
     
     private let baseURL = URL(string: "https://pokeapi.co")
     private var task: URLSessionTask?
+    private lazy var jsonDecoder = JSONDecoder()
     
-    func performSearch(() -> Void) {
+    func getPokemon(() -> Void) {
         
     }
 }
