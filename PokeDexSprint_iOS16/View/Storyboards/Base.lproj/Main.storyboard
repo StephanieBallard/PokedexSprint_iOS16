@@ -76,8 +76,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zBU-Ap-2da">
+                                <rect key="frame" x="37" y="278" width="340" height="340"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="Im6-mu-DPy"/>
+                                    <constraint firstAttribute="width" constant="340" id="hS1-4f-Rkg"/>
+                                    <constraint firstAttribute="width" secondItem="zBU-Ap-2da" secondAttribute="height" multiplier="1:1" id="wrF-Ih-jg0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQK-vc-uvS">
+                                <rect key="frame" x="20" y="826" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save Pokemon"/>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sVQ-4b-daj">
-                                <rect key="frame" x="20" y="764.5" width="374" height="77.5"/>
+                                <rect key="frame" x="40" y="638" width="334" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID: 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5d-Gu-TPC">
                                         <rect key="frame" x="0.0" y="0.0" width="45.5" height="20.5"/>
@@ -99,29 +112,24 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zBU-Ap-2da">
-                                <rect key="frame" x="37" y="278" width="340" height="340"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="340" id="Im6-mu-DPy"/>
-                                    <constraint firstAttribute="width" constant="340" id="hS1-4f-Rkg"/>
-                                    <constraint firstAttribute="width" secondItem="zBU-Ap-2da" secondAttribute="height" multiplier="1:1" id="wrF-Ih-jg0"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Quk-Cf-KnQ" firstAttribute="trailing" secondItem="NQK-vc-uvS" secondAttribute="trailing" constant="20" id="5U7-6N-9ea"/>
+                            <constraint firstItem="Quk-Cf-KnQ" firstAttribute="trailing" secondItem="sVQ-4b-daj" secondAttribute="trailing" constant="40" id="85B-fW-3pk"/>
                             <constraint firstItem="sNg-le-CS3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Quk-Cf-KnQ" secondAttribute="leading" id="Bnm-ce-s7e"/>
                             <constraint firstItem="zBU-Ap-2da" firstAttribute="centerY" secondItem="aXc-l1-VFz" secondAttribute="centerY" id="D2m-aL-eil"/>
-                            <constraint firstItem="Quk-Cf-KnQ" firstAttribute="bottom" secondItem="sVQ-4b-daj" secondAttribute="bottom" constant="20" id="Edb-iy-89u"/>
                             <constraint firstItem="X0R-6b-Bpn" firstAttribute="top" secondItem="Quk-Cf-KnQ" secondAttribute="top" id="FWb-bK-fcd"/>
+                            <constraint firstItem="sVQ-4b-daj" firstAttribute="top" secondItem="zBU-Ap-2da" secondAttribute="bottom" constant="20" id="I3Q-92-g54"/>
                             <constraint firstItem="sNg-le-CS3" firstAttribute="top" secondItem="X0R-6b-Bpn" secondAttribute="bottom" constant="20" id="IeG-qz-1zO"/>
                             <constraint firstItem="zBU-Ap-2da" firstAttribute="centerX" secondItem="aXc-l1-VFz" secondAttribute="centerX" id="OEJ-2b-M22"/>
+                            <constraint firstItem="NQK-vc-uvS" firstAttribute="bottom" secondItem="Quk-Cf-KnQ" secondAttribute="bottom" id="SCP-6G-UFG"/>
                             <constraint firstItem="sNg-le-CS3" firstAttribute="centerX" secondItem="aXc-l1-VFz" secondAttribute="centerX" id="U0I-Ox-aBe"/>
                             <constraint firstItem="X0R-6b-Bpn" firstAttribute="trailing" secondItem="Quk-Cf-KnQ" secondAttribute="trailing" id="Uhx-iZ-HWY"/>
                             <constraint firstItem="X0R-6b-Bpn" firstAttribute="leading" secondItem="Quk-Cf-KnQ" secondAttribute="leading" id="Wx3-D2-7q9"/>
-                            <constraint firstItem="sVQ-4b-daj" firstAttribute="leading" secondItem="Quk-Cf-KnQ" secondAttribute="leading" constant="20" id="lxu-aY-m6f"/>
-                            <constraint firstItem="Quk-Cf-KnQ" firstAttribute="trailing" secondItem="sVQ-4b-daj" secondAttribute="trailing" constant="20" id="uM7-RI-04a"/>
+                            <constraint firstItem="sVQ-4b-daj" firstAttribute="leading" secondItem="Quk-Cf-KnQ" secondAttribute="leading" constant="40" id="bux-sf-U3A"/>
                             <constraint firstItem="Quk-Cf-KnQ" firstAttribute="trailing" secondItem="sNg-le-CS3" secondAttribute="trailing" constant="20" id="vd1-b9-LMa"/>
+                            <constraint firstItem="NQK-vc-uvS" firstAttribute="leading" secondItem="Quk-Cf-KnQ" secondAttribute="leading" constant="20" id="x9P-fc-yYh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Quk-Cf-KnQ"/>
                     </view>
