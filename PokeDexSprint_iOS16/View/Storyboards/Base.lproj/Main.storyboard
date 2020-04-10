@@ -91,6 +91,9 @@
                                 <rect key="frame" x="20" y="826" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save Pokemon"/>
+                                <connections>
+                                    <action selector="savePokemonButtonTapped:" destination="aWb-27-k5s" eventType="touchUpInside" id="oe1-QN-QbM"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sVQ-4b-daj">
                                 <rect key="frame" x="40" y="638" width="334" height="77.5"/>
@@ -137,6 +140,14 @@
                         <viewLayoutGuide key="safeArea" id="Quk-Cf-KnQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pokemon Search" id="DDH-CV-RhK"/>
+                    <connections>
+                        <outlet property="pokemonAbilitiesTextLabel" destination="Xpb-Kl-nTt" id="oCX-AI-Y1A"/>
+                        <outlet property="pokemonIdTextLabel" destination="C5d-Gu-TPC" id="Nn0-13-JOR"/>
+                        <outlet property="pokemonImageView" destination="zBU-Ap-2da" id="qxb-YN-M71"/>
+                        <outlet property="pokemonNameTextLabel" destination="sNg-le-CS3" id="M9D-ld-mth"/>
+                        <outlet property="pokemonSearchBar" destination="X0R-6b-Bpn" id="Aim-1O-dXN"/>
+                        <outlet property="pokemonTypesTextLabel" destination="hMa-m8-y55" id="iep-Oy-6T7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCH-j7-UaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
