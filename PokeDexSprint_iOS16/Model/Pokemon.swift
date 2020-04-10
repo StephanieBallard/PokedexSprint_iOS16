@@ -6,31 +6,6 @@
 //  Copyright © 2020 Stephanie Ballard. All rights reserved.
 //
 
-//import Foundation
-//
-//struct Pokemon: Codable {
-//    let name: String
-//    let id: Int
-//    let sprite: Sprite
-//    let types: [Types]
-//    let abilities: [Ability]
-//
-//}
-//
-//struct Sprite: Codable {
-//
-//}
-//
-//struct Types: Codable {
-//
-//}
-//
-//struct Ability: Codable {
-//
-//}
-
-
-
 import Foundation
 
 // MARK: - Pokedex
