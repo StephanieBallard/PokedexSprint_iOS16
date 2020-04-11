@@ -20,12 +20,30 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PokemonCell" id="U8s-zR-L4Q" customClass="PokemonTableViewCell" customModule="PokeDexSprint_iOS16" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="59.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U8s-zR-L4Q" id="d3t-mt-STQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLs-Tz-tdr">
+                                                    <rect key="frame" x="40" y="19" width="334" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CLs-Tz-tdr" firstAttribute="leading" secondItem="d3t-mt-STQ" secondAttribute="leadingMargin" constant="20" id="A8O-6Z-JWC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CLs-Tz-tdr" secondAttribute="bottom" constant="8" id="jKs-Da-5mu"/>
+                                                <constraint firstItem="CLs-Tz-tdr" firstAttribute="top" secondItem="d3t-mt-STQ" secondAttribute="topMargin" constant="8" id="qYD-BD-QgJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CLs-Tz-tdr" secondAttribute="trailing" constant="20" id="yXV-VF-OCF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pokemonNameTextLabel" destination="CLs-Tz-tdr" id="Lly-1O-Qvq"/>
+                                            <segue destination="aWb-27-k5s" kind="show" identifier="pokemonCellShowSegue" id="om3-aW-P3z"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -73,7 +91,7 @@
                                     <outlet property="delegate" destination="aWb-27-k5s" id="N9W-aq-Kk5"/>
                                 </connections>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pikachu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNg-le-CS3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNg-le-CS3">
                                 <rect key="frame" x="20" y="216" width="374" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
@@ -172,4 +190,7 @@
             <point key="canvasLocation" x="0.0" y="140.625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="om3-aW-P3z"/>
+    </inferredMetricsTieBreakers>
 </document>

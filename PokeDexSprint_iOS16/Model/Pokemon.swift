@@ -8,43 +8,31 @@
 
 import Foundation
 
-// MARK: - Pokedex
-struct Pokedex {
+// MARK: - Pokemon
+struct Pokemon: Codable {
     let abilities: [Ability]
     let id: Int
     let name: String
-    let species: Species
     let sprites: Sprites
     let types: [TypeElement]
 }
 
 // MARK: - Ability
-struct Ability {
+struct Ability: Codable {
     let ability: Species
-    let isHidden: Bool
-    let slot: Int
 }
 
 // MARK: - Species
-struct Species {
+struct Species: Codable {
     let name: String
-    let url: String
 }
 
 // MARK: - Sprites
-struct Sprites {
-    let backDefault: String
-    let backFemale: NSNull
-    let backShiny: String
-    let backShinyFemale: NSNull
-    let frontDefault: String
-    let frontFemale: NSNull
-    let frontShiny: String
-    let frontShinyFemale: NSNull
+struct Sprites: Codable {
+    let front_default: String
 }
 
 // MARK: - TypeElement
-struct TypeElement {
-    let slot: Int
+struct TypeElement: Codable {
     let type: Species
 }
