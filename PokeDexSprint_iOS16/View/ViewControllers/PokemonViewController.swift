@@ -35,8 +35,6 @@ class PokemonViewController: UIViewController {
             destination.pokemon = pokemonApiController.pokedex[indexPath.row]
         }
     }
-    
-
 }
 
 extension PokemonViewController: UITableViewDataSource {
